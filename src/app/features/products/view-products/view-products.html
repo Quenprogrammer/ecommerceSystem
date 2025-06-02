@@ -115,7 +115,7 @@
         <!-- Accordion -->
 
         <div class="d-grid mb-4">
-          <button type="button" class="btn btn-primary btntransition">Add to cart</button>
+          <button type="button" class="btn btn-primary btntransition" (click)="isModal2Open.set(true)">Add to carttt</button>
         </div>
 
         <!-- Media -->
@@ -217,3 +217,41 @@
 }
 
 -->
+@if (isModal2Open(); as open) {
+  <div class="modal-overlay" style="overflow: hidden">
+    <div class="modal-content shadow-none" style="overflow: hidden">
+      <div class="modal-content shadow-none">
+        <div class="modal-body">
+          <!-- Form -->
+          <div class="mb-1">
+            <div class="input-group mb-sm-0 text-end">
+              <button
+                (click)="isModal2Open.set(false)"
+                type="button"
+                class="btn-close p-3"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+              </button>
+            </div>
+          </div>
+          <!-- End Form -->
+
+          <div class="card shadow-none">
+            <!-- Body -->
+            <div class="card-body">
+              @for(items of Banks; track items.name){
+                <div class="col-4 col-md-3 card-link custom-hover" >
+                  <img (click)="openPaymentPanel('Cross click')" class="card-link custom-hover"  style="width: 50px; height: 50px; border-radius: 20%; object-fit: cover; cursor: pointer" [src]=items.image alt="Square image ">
+                  <p>{{items.name}}</p>
+
+                </div>
+
+              }
+            </div>
+            <!-- End Body -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
