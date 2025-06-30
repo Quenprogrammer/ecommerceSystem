@@ -18,7 +18,7 @@
   padding: 20px;
   border-radius: 5px;
   width: 100%; /* Adjusted to 80% */
-  max-width: 550px; /* Optional: You can set a max width to ensure it doesn't get too large */
+/* Optional: You can set a max width to ensure it doesn't get too large */
   max-height: 90vh;
   overflow-y: auto; /* Make the content scrollable vertically */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -56,4 +56,11 @@ button {
   overflow-y: auto; /* Make the content scrollable vertically */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+}
+
+.bankWidth{
+  max-width: 650px;
+}
+.bankPayment{
+  max-width: 950px;
 }

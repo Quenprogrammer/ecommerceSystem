@@ -17,6 +17,7 @@ import {FormsModule} from '@angular/forms';
 })
 export class ViewProducts implements OnInit{
   isModal2Open = signal(false);
+  isModal3Open = signal(false);
   product: ElectronicsProduct | undefined;
   quantity: number = 1;
   path:string='apps/'

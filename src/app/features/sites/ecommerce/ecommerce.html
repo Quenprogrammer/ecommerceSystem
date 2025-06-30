@@ -1,0 +1,195 @@
+<main id="content" role="main">
+  <!-- Hero -->
+  <div class="position-relative overflow-hidden content-space-t-md-4">
+    <div class="container">
+      <div class="position-relative content-space-t-3 content-space-t-md-0 content-space-t-lg-3 content-space-b-2 content-space-b-md-3 content-space-b-xl-5">
+        <div class="row position-relative zi-2 mt-md-n5">
+          <div class="col-md-8 mb-7 mb-md-0">
+            <!-- Heading -->
+            <div class="w-md-75 mb-7">
+              <h1 class="display-4">Discover a place you'll
+                <span class="text-primary text-highlight-warning">
+                    <span class="js-typedjs" data-hs-typed-options="{
+                            &quot;strings&quot;: [&quot;love to live&quot;, &quot;enjoy living&quot;],
+                            &quot;typeSpeed&quot;: 90,
+                            &quot;loop&quot;: true,
+                            &quot;backSpeed&quot;: 30,
+                            &quot;backDelay&quot;: 2500
+                          }">enjoy living</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+                  </span>
+              </h1>
+            </div>
+            <!-- End Heading -->
+
+            <form>
+              <!-- Input Card -->
+              <div class="input-card">
+                <div class="input-card-form">
+                  <label for="searchLocationForm" class="form-label visually-hidden">Search location</label>
+                  <div class="input-group input-group-merge">
+                      <span class="input-group-prepend input-group-text">
+                        <i class="bi-search"></i>
+                      </span>
+                    <input type="text" class="form-control form-control-lg" id="searchLocationForm" placeholder="Enter location" aria-label="Enter location">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Search</button>
+              </div>
+              <!-- End Input Card -->
+            </form>
+
+            <p class="form-text small">Search through over 125,000 listings</p>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+
+        <div class="col-md-6 position-md-absolute top-0 end-0">
+          <img class="img-fluid" src="../assets/img/900x900/img20.jpg" alt="Image Description">
+
+          <!-- SVG Shape -->
+          <div class="position-absolute bottom-0 end-0 zi-n1 mb-n10 me-n7" style="width: 12rem;">
+            <img class="img-fluid" src="../assets/svg/components/dots-lg.svg" alt="Image Description">
+          </div>
+          <!-- End SVG Shape -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10 position-absolute top-0 start-0 zi-n1 gradient-y-three-sm-primary h-100" style="background-size: calc(1000px + (100vw - 1000px) / 2);"></div>
+  </div>
+  <!-- End Hero -->
+
+  <!-- Card Grid -->
+  <div class="container content-space-2 content-space-b-lg-3">
+    <!-- Title -->
+    <app-header2-center [title]="'New properties on Front'"></app-header2-center>
+    <!-- End Title -->
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-5">
+
+    <app-property-card-details
+      [image]="listing.image"
+      [badge]="listing.badge"
+      [subtitle]="listing.subtitle"
+      [title]="listing.title"
+      [price]="listing.price"
+      [link]="listing.link"
+      [bed]="listing.bed"
+      [bath]="listing.bath"
+      [sqft]="listing.sqft">
+    ></app-property-card-details>
+    </div>
+    <!-- End Row -->
+
+    <div class="text-center">
+      <a class="btn btn-outline-primary" href="../demo-real-estate/property-grid.html">View all properties for sale <i class="bi-chevron-right small ms-1"></i></a>
+    </div>
+  </div>
+  <!-- End Card Grid -->
+
+  <!-- Features -->
+  <div class="position-relative">
+    <div class="container content-space-lg-3">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-9 mb-7 mb-md-0">
+          <!-- Heading -->
+          <div class="w-md-65 mb-7">
+            <h2 class="h1">{{menuHeader}}</h2>
+            <p>{{menuHeaderTagLine}}</p>
+          </div>
+          <!-- End Heading -->
+
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <!-- Card -->
+              <div class="card h-100">
+                <div class="card-body">
+                    <span class="svg-icon text-primary mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 3C5.67157 3 5 3.67157 5 4.5V6H3.5C2.67157 6 2 6.67157 2 7.5C2 8.32843 2.67157 9 3.5 9H5V19.5C5 20.3284 5.67157 21 6.5 21C7.32843 21 8 20.3284 8 19.5V9H20.5C21.3284 9 22 8.32843 22 7.5C22 6.67157 21.3284 6 20.5 6H8V4.5C8 3.67157 7.32843 3 6.5 3Z" fill="#035A4B"></path>
+                      <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M20.5 11H10V17.5C10 18.3284 10.6716 19 11.5 19H15.5C17.3546 19 19.0277 18.2233 20.2119 16.9775C20.1436 16.9922 20.0727 17 20 17C19.4477 17 19 16.5523 19 16V13C19 12.4477 19.4477 12 20 12C20.5523 12 21 12.4477 21 13V15.9657C21.6334 14.9626 22 13.7741 22 12.5C22 11.6716 21.3284 11 20.5 11Z" fill="#035A4B"></path>
+                      </svg>
+
+                    </span>
+                  <h4 class="card-title">Find homes for sale</h4>
+                  <p class="card-text">Over 1 million+ homes for sale available on the website.</p>
+                  <a class="card-link" href="#">Properties for sale <i class="bi-chevron-right small ms-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+
+    <div class="banner-half-middle-x bg-img-start d-none d-md-block" style="background-image: url(../assets/img/900x900/img22.jpg);"></div>
+  </div>
+  <!-- End Features -->
+
+  <!-- Features Stats -->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="text-center">
+          <small class="text-cap text-primary">— Valuation methods </small>
+          <h4 class="display-4">500,000</h4>
+          <p>Our valuation methods are based on more than 500,000 real transactions.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features Stats -->
+
+  <!-- Card Grid -->
+  <div class="container content-space-b-2 content-space-b-lg-3">
+    <!-- Title -->
+    <app-header-and-tag [title]="'Browse properties by city in the UK'" [description]="'Take a deep dive and browse original neighborhood photos, drone footage, resident reviews and local insights to see if the homes for sale are right for you.'"></app-header-and-tag>
+
+    <div class="text-center">
+      <!-- Nav -->
+      <ul class="nav nav-segment mb-7" id="featuresTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" href="#forSale" id="forSale-tab" data-bs-toggle="tab" data-bs-target="#forSale" role="tab" aria-controls="forSale" aria-selected="true">For sale</a>
+        </li>
+
+
+      </ul>
+      <!-- End Nav -->
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="houseHeroTabContent">
+      <div class="tab-pane fade show active" id="forSale" role="tabpanel" aria-labelledby="forSale-tab">
+        <div class="row gx-3">
+          <ng-container *ngFor="let card of cards">
+            <app-property-card
+              [image]="card.image"
+              [title]="card.title"
+              [badge]="card.badge"
+              [description]="card.description"
+              [link]="card.link">
+            </app-property-card>
+          </ng-container>
+
+
+        </div>
+        <!-- End Row -->
+      </div>
+
+       </div>
+    <!-- End Tab Content -->
+  </div>
+  <!-- End Card Grid -->
+
+
+</main>

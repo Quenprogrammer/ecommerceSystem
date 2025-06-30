@@ -1,0 +1,39 @@
+<div class="col mb-3">
+  <a class="card card-flush shadow-none h-100" [href]="link">
+    <div class="card-pinned">
+      <img class="card-img" [src]="image" alt="Property image" />
+
+      <div class="card-pinned-top-start">
+        <span class="badge bg-success">{{ badge }}</span>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <span class="card-subtitle text-body">{{ subtitle }}</span>
+
+      <div class="row align-items-center mb-3">
+        <div class="col">
+          <h4 class="card-title text-inherit">{{ title }}</h4>
+        </div>
+        <div class="col-auto">
+          <h3 class="card-title text-primary">{{ price }}</h3>
+        </div>
+      </div>
+
+      <ul class="list-inline list-separator text-body small">
+        <li class="list-inline-item">
+          <i class="bi bi-house-door me-1 text-muted"></i>
+          {{ bed }} bed
+        </li>
+        <li class="list-inline-item">
+          <i class="bi bi-droplet-half me-1 text-muted"></i>
+          {{ bath }} bath
+        </li>
+        <li class="list-inline-item">
+          <i class="bi bi-rulers text-muted me-1"></i>
+          {{ sqft }} sqft
+        </li>
+      </ul>
+    </div>
+  </a>
+</div>

@@ -1,1 +1,30 @@
-<p>privacy works!</p>
+<main id="content" role="main">
+  <!-- Content -->
+  <div class="container content-space-3 content-space-lg-4">
+    <!-- Card -->
+    <div class="card card-lg">
+      <!-- Header -->
+      <div class="card-header bg-dark py-sm-10">
+        <h1 class="card-title h2 text-white">Privacy &amp; Policy</h1>
+        <p class="card-text text-white">Last modified: {{lastModified}}</p>
+      </div>
+      <!-- End Header -->
+
+
+      <div class="card-body">
+        @for (section of privacyPolicySections; track section.id) {
+          <div class="mb-7">
+            <h4>{{ section.title }}</h4>
+
+            @for (paragraph of section.content; track $index) {
+              <p>{{ paragraph }}</p>
+            }   </div>
+        }
+
+      </div>
+      <!-- End Card Body -->
+    </div>
+    <!-- End Card -->
+  </div>
+  <!-- End Content -->
+</main>
