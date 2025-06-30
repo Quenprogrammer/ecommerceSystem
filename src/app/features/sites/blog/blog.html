@@ -1,0 +1,105 @@
+<main id="content" role="main">
+  <!-- Alert -->
+  <div class="alert alert-primary text-center rounded-0 mb-0" role="alert">
+    <span class="fw-semibold">{{ discountLabel }}</span> {{ discountMessage }}
+  </div>
+  <!-- End Alert -->
+
+  <!-- Hero -->
+  <div class="bg-img-start" [style.backgroundImage]="'url(' + heroImage + ')'">
+    <div class="container content-space-2 content-space-lg-3">
+      <div class="w-md-65 w-lg-35">
+        <div class="mb-4">
+          <h1>{{ heroTitle }}</h1>
+          <p class="text-dark">{{ heroDescription }}</p>
+        </div>
+        <a class="btn btn-primary btn-transition rounded-pill" [href]="heroButtonLink">{{ heroButtonText }}</a>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+
+  <!-- Newsroom Header -->
+  <div class="container content-space-t-3 content-space-t-lg-5 content-space-b-1 content-space-b-md-2">
+    <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+      <h1 class="display-4">{{ newsroomHeader }}</h1>
+      <p class="lead">{{ newsroomSubHeader }}</p>
+    </div>
+  </div>
+
+  <!-- Card Grid -->
+  <div class="container content-space-b-2 content-space-b-lg-3">
+    <div class="row justify-content-md-between align-items-md-center mb-7">
+      <div class="col-md-5 mb-5 mb-md-0">
+        <!-- Tags -->
+        <div class="d-md-flex align-items-md-center text-center text-md-start">
+          <span class="d-block me-md-3 mb-2 mb-md-1">Tags:</span>
+          <ng-container *ngFor="let tag of tags">
+            <a class="btn btn-soft-secondary btn-xs rounded-pill m-1" href="javascript:;">{{ tag }}</a>
+          </ng-container>
+        </div>
+        <!-- End Tags -->
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <form (submit)="onSearchSubmit(searchInput.value)">
+          <div class="input-group">
+            <input #searchInput type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
+            <button type="submit" class="btn btn-primary"><i class="bi-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- News Cards -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-5">
+      <ng-container *ngFor="let card of newsCards">
+        <div class="col mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" [src]="card.image" alt="Image Description">
+            <div class="card-body">
+              <div class="mb-3">
+                <img class="avatar avatar-lg avatar-4x3" [src]="card.logo" alt="Logo">
+              </div>
+              <p class="card-text">{{ card.description }}</p>
+            </div>
+            <div class="card-footer pt-0">
+              <a class="card-link" [href]="card.link">{{ card.linkText }} <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center">
+      <a class="btn btn-outline-primary" [href]="viewAllLink">{{ viewAllText }}</a>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-end">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" href="#" aria-label="Previous" (click)="prevPage()">
+            <span aria-hidden="true"><i class="bi-chevron-double-left small"></i></span>
+          </a>
+        </li>
+
+        <li *ngFor="let page of totalPages; let i = index" class="page-item" [class.active]="i + 1 === currentPage">
+          <a class="page-link" href="#" (click)="goToPage(i + 1)">{{ i + 1 }}</a>
+        </li>
+
+        <li class="page-item" [class.disabled]="currentPage === totalPages.length">
+          <a class="page-link" href="#" aria-label="Next" (click)="nextPage()">
+            <span aria-hidden="true"><i class="bi-chevron-double-right small"></i></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Optional Bottom Section -->
+  <div class="container content-space-2 content-space-lg-3">
+    <!-- Add more if needed -->
+  </div>
+</main>
